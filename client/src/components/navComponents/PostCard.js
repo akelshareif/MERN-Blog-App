@@ -3,6 +3,10 @@ import { Card } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 import '../../styles/styles.css';
 
+
+// this component must receive prop values to dynamically update
+// once card is built with new-post data, it must be sent to <StackContainer /> component for rendering
+
 const PostCard = props => {
 
     return(
