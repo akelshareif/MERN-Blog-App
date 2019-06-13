@@ -2,6 +2,7 @@ import React from 'react';
 import { Menu } from 'semantic-ui-react';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import StackContainer from './navComponents/StackContainer';
+import PostForm from './navComponents/PostForm';
 
 
 // in order for routes to render components, they must all be encased in the same file
@@ -18,6 +19,9 @@ class NavBar extends React.Component{
         this.setState({activeItem: name});
     }
 
+    activeCheck = (match, location) => {
+        
+    }
 
     render(){
         const { activeItem } = this.state;
@@ -28,24 +32,23 @@ class NavBar extends React.Component{
                     <Menu.Item
                         name='home'
                         as={NavLink}
-                        to='/'
                         exact
-                        activeClassName='active item'
+                        to='/'
                         active={activeItem === 'home'}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Item
                         name='newPost'
                         as={NavLink}
-                        to='/new'
                         exact
+                        to='/new'
                         active={activeItem === 'newPost'}
                         onClick={this.handleItemClick}
                     />
                 </Menu>
                 
                 <Route path='/' exact component={StackContainer} />
-                <Route path='/new' exact component={''} />
+                <Route path='/new' exact component={PostForm} />
             </Router>
         );  
     }

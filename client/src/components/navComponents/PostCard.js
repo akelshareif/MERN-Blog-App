@@ -13,6 +13,7 @@ const PostCard = props => {
         <Card
             link
             as={NavLink}
+            exact
             to='#'
             image='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkM_YGRfI5olnPa5XmGJeDhu5etD9ZrD3PwCz4hmfWF6cPxUACoQ'
             header='Test Card'
