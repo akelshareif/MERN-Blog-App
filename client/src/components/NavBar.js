@@ -19,10 +19,6 @@ class NavBar extends React.Component{
         this.setState({activeItem: name});
     }
 
-    activeCheck = (match, location) => {
-        
-    }
-
     render(){
         const { activeItem } = this.state;
 
@@ -49,6 +45,7 @@ class NavBar extends React.Component{
                 
                 <Route path='/' exact component={StackContainer} />
                 <Route path='/new' exact component={PostForm} />
+                <Route path='/new/:id' exact component={PostForm} />
             </Router>
         );  
     }
