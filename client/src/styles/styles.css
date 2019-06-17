@@ -6,3 +6,7 @@
     width: 75%;
     margin: 2rem auto;
 }
+
+.zero-margin-bottom{
+    margin-bottom: 0 !important;
+}
