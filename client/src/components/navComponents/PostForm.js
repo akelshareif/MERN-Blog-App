@@ -11,8 +11,6 @@ class PostForm extends React.Component {
         return(
             <div>
                 <input
-                    // onChange={formProps.input.onChange}
-                    // value={formProps.input.value}
                     {...formProps.input}
                     placeholder={formProps.placeholder}
                     autoComplete='off'
