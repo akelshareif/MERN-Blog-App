@@ -17,7 +17,7 @@ mongoose.connection.once('open', () => console.log("MongoDB database connection 
 //Mongoose model config
 const blogSchema = new mongoose.Schema({
     title: String,
-    image: String,
+    imgURL: String,
     content: String,
     created: {type: Date, default: Date.now}
 });

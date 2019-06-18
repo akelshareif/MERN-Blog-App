@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Form, Button, Message } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
+import axios from 'axios';
 
-// this contains the form where a new post would be created
-// data must be saved to database then send to <PostCard /> component for building and rendering
+// use axios to post form data to database
 
 class PostForm extends React.Component {
 
@@ -48,6 +48,9 @@ class PostForm extends React.Component {
 
     onSubmit(formValues) {
         console.log(formValues);
+        axios.post('/blogs', formValues)
+            .then(() => console.log('post request succeeded'))
+            .catch(err => console.log(err));
     }
     
     render() {
