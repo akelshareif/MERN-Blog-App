@@ -18,10 +18,10 @@ const PostCard = props => {
         <Card
             link
             onClick={handleClick}
-            image='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkM_YGRfI5olnPa5XmGJeDhu5etD9ZrD3PwCz4hmfWF6cPxUACoQ'
-            header='Test Card'
-            meta='Posted on'
-            description='This is a test card with a description.'
+            image={props.imgURL}
+            header={props.title}
+            meta={props.created}
+            description={props.content}
             className='margin-right'
         />
     );

@@ -1,16 +1,11 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
+import selectedPostReducer from './selectedPostReducer';
+import postsReducer from './postsReducer';
 
-const selectedPostReducer = (selectedPost = null, action) => {
-    switch(action.type) {
-        case 'SELECTED_POST':
-            return action.payload;
-        default:
-            return selectedPost;
-    }
-}
 
 export default combineReducers({
     selectedPost: selectedPostReducer,
+    posts: postsReducer,
     form: formReducer
 });
